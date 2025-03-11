@@ -48,4 +48,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 5000);
         });
     }
+    const showResumeBtn = document.getElementById('show-resume');
+    if (showResumeBtn) {
+        showResumeBtn.addEventListener('click', function() {
+            // Trigger download automatically when modal opens
+            setTimeout(function() {
+                document.getElementById('download-resume').click();
+            }, 1000); // Small delay to ensure modal is visible first
+        });
+    }
 });

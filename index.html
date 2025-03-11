@@ -39,11 +39,13 @@
             
             <div class="col-md-4">
                 <div class="card profile-card">
-                    <img src="pfp.png" class="card-img-top" alt="Profile Photo">
+                    <img src="images/pfp.png" class="card-img-top" alt="Profile Photo">
                     <div class="card-body">
                         <h5 class="card-title">Derick Shi</h5>
                         <p class="card-text">Student / Developer / Entrepreneur</p>
-                        <button id="show-email" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#emailModal">Show Email</button>
+                        <button id="show-resume" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#resumeModal">View Resume</button>
+
+
 
                         <p id="email-display" class="mt-2 d-none">dericks1real@gmail.com</p>
                     </div>
@@ -93,25 +95,32 @@
     </div>
 
     <!--Pop up-->
-    <div class="modal fade" id="emailModal" tabindex="-1" aria-labelledby="emailModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+    <div class="modal fade" id="resumeModal" tabindex="-1" aria-labelledby="resumeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="emailModalLabel">Contact Information</h5>
+                    <h5 class="modal-title" id="resumeModalLabel">My Resume</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>You can reach me at:</p>
-                    <p id="email-display" class="email-popup">dshi2@nd.edu</p>
+                    <p>Preview of my resume:</p>
+                    <div class="resume-preview">
+                        <!-- You can add a preview image of your resume here -->
+                        <img src="images/resume.png" class="img-fluid" alt="Resume Preview">
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="images/resume.pdf" download="Derick_Shi_Resume.pdf" class="btn btn-primary" id="download-resume">Download Resume</a>
                 </div>
             </div>
         </div>
     </div>
 
   
+
+
+
     <footer class="bg-dark text-white text-center py-3">
         <div class="container">
             <p class="mb-0">&copy; 2025 Derick Shi. All rights reserved.</p>
