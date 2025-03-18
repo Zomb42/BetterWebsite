@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 readMoreBtn.textContent = 'Read More';
             }
         });
-    }
+    } 
 
     const detailsBtns = document.querySelectorAll('.details-btn');
     detailsBtns.forEach(function(btn) {
