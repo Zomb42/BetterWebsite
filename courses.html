@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Courses - Prerequisite Tree</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Mermaid.js -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
+    </script>
+    <style>
+        .mermaid {
+            background-color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+            overflow-x: auto;
+            border: 1px solid #edf2f7;
+        }
+        .legend-item {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            margin-right: 8px;
+        }
+        .taken { background-color: #d4edda; border: 1px solid #c3e6cb; }
+        .tested-out { background-color: #e0d4f7; border: 1px solid #c5b3e9; }
+        .in-progress { background-color: #fff3cd; border: 1px solid #ffeeba; }
+        .planned { background-color: #e2e3e5; border: 1px solid #d6d8db; }
+        .ap {background-color: #f27d69; border: 1px solid #f27d69}
+    </style>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">My Website</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="courses.html">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="links.html">Links</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <h1 class="projects-title">Course Prerequisite Tree</h1>
+        <p class="lead">A visualization of my academic journey in Computer Science, Math, and Finance.</p>
+
+        <!-- Legend -->
+        <div class="mb-4 p-3 bg-white border-0 rounded shadow-sm">
+            <h5 class="mb-3" style="color: var(--primary-color); font-weight: 700;">Status Legend</h5>
+            <div class="legend-item">
+                <div class="legend-color taken"></div>
+                <span>Taken</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color tested-out"></div>
+                <span>Tested Out</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color in-progress"></div>
+                <span>In Progress</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color planned"></div>
+                <span>Planned</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color ap"></div>
+                <span>Qualified AP Credit Not Used</span>
+            </div>
+        </div>
+
+        <!-- Mermaid Diagram -->
+        <div class="mermaid">
+graph TD
+    %% Define Courses
+    
+    subgraph AP_Credits [AP Credits]
+        direction TB
+        AP1[AP Biology]
+        AP2[AP Microeconomics]
+        AP3[AP Macroeconomics]
+        AP4[AP US History]
+        AP5[AP US Gov]
+        AP6[AP Psychology]
+    end
+
+    subgraph CS_Track [Computer Science] 
+        direction TB
+        CS1[Fundamentals of Computing]
+        CS2[Discrete Math]
+        CS1 --> CS3[Data Structures]
+        CS1 --> CS4[Systems Programming]
+        CS1 --> CS5[Logic Design]
+        CS5 --> CS6[Computer Architecture]
+        CS4 --> CS7[Programming Paradigms] 
+        CS3 --> CS7
+        CS3 --> CS8[Theory of Computing]
+        CS2 --> CS8
+        CS4 --> CS9[Operating Systems] 
+        
+        CS3 --> CS10[Intro to AI] 
+        CS4 --> CS10
+        CS6 --> CS11[Compiler Design]
+        CS3 --> CS11
+        CS9 --> CS12[Distributed Systems] 
+        CS8 --> CS13[Algorithms] 
+        CS4 --> CS14[High Frequency Trading] 
+        CS3 --> CS14
+        CS15[Ethical and Professional Issues]
+    end
+
+    subgraph Math_Track [Mathematics]
+        direction TB
+        MA1[Calculus I]
+        MA2[Calculus II]
+        MA3[Calculus III]
+        MA4[Intro to Lin Alg and Dif Eq]
+        MA5[Intro to Probability]
+        MA6[Math Problem Solving]
+        MA7[Applied Math Methods II]
+        MA9[Statistical Methods]
+        MA10[Numerical Analysis]
+    end
+    
+    ENG1[Physics 1]
+    ENG2[Chemistry]
+    ENG3[Engineering Design]
+    ENG4[Engineering Computing]
+    ENG5[Engineering of Photography]
+
+    BUS1[Intermediate Micro Economics]
+    BUS2[Integrated Business Fundamentals 1]
+
+    GE1[Moreau]
+    GE2[Writing Core] 
+    GE3[Philo 1: Philosophy and Math]
+    GE4[History USEM]
+    GE5[Intro to Design Thinking]
+    GE6[Theology 1]
+    GE7[Philo 2: Truth Proof Paradoxes]
+
+    
+
+    %% Styling Definitions
+    classDef taken fill:#d4edda,stroke:#28a745,stroke-width:2px;
+    classDef tested fill:#e0d4f7,stroke:#6f42c1,stroke-width:2px;
+    classDef ip fill:#fff3cd,stroke:#ffc107,stroke-width:2px;
+    classDef planned fill:#f8f9fa,stroke:#6c757d,stroke-width:1px;
+    classDef ap fill:#e2e3e5,stroke:#343a40,stroke-dasharray: 5 5;
+
+    %% Class Assignments
+    class AP1,AP2,AP3,AP4,AP5,AP6 ap
+    class CS1,CS2,CS3,CS4,CS5,CS6,CS7,CS8,CS9,CS10,CS11,CS15,MA4,MA5,MA6,MA7,MA9,ENG2,ENG3,ENG4,ENG5,GE1,GE3,GE4,GE5,GE6,BUS1,BUS2 taken
+    class MA1,MA2,MA3,ENG1,GE2 tested
+    class CS12,CS13,CS14,MA10,GE7 ip
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Derick Shi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
