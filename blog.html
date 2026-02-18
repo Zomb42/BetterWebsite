@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website - Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .blog-card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            overflow: hidden;
+        }
+        .blog-card:hover {
+            transform: translateY(-6px);
+        }
+        .blog-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 20px;
+            background-color: #eef2ff;
+            color: var(--primary-color);
+            border: 1px solid #c7d2fe;
+            margin-right: 6px;
+            margin-bottom: 6px;
+        }
+        .blog-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+            margin-bottom: 10px;
+        }
+        .blog-excerpt {
+            font-size: 0.95rem;
+            color: #4a5568;
+            line-height: 1.7;
+        }
+
+        /* Modal overrides for reading view */
+        .modal-body p {
+            line-height: 1.85;
+            font-size: 1rem;
+            color: #2d3436;
+        }
+        .modal-body h5 {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-top: 1.5rem;
+        }
+        .modal-title {
+            font-weight: 800;
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">My Website</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="links.html">Links</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Content -->
+    <div class="container my-5">
+        <h1 class="mb-2 projects-title">Blog &amp; Essays</h1>
+        <p class="lead mb-5">
+            Thoughts on whatever else I find interesting. I'll try not to waste your time.
+
+
+        </p>
+
+        <div class="row g-4">
+
+            <!-- Post 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card blog-card h-100">
+                    <div class="card-body d-flex flex-column p-4">
+                        <div class="mb-2">
+                            <span class="blog-tag">Computer Science</span>
+                            <span class="blog-tag">Compilers</span>
+                        </div>
+                        <h5 class="card-title fw-bold" style="color: var(--primary-color);">What I Learned Building a Compiler</h5>
+                        <p class="blog-meta">February 2026 &nbsp;·&nbsp; 5 min read</p>
+                        <p class="blog-excerpt flex-grow-1">Building a full compiler from scratch — from lexing to assembly generation — was one of the most grueling and rewarding projects I've done. Here's what surprised me most.</p>
+                        <button class="btn btn-outline-primary btn-sm mt-3 align-self-start"
+                                data-bs-toggle="modal" data-bs-target="#post1Modal">
+                            Read More
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card blog-card h-100">
+                    <div class="card-body d-flex flex-column p-4">
+                        <div class="mb-2">
+                            <span class="blog-tag">Finance</span>
+                            <span class="blog-tag">Algorithms</span>
+                        </div>
+                        <h5 class="card-title fw-bold" style="color: var(--primary-color);">Lessons from the IMC Prosperity Trading Challenge</h5>
+                        <p class="blog-meta">January 2026 &nbsp;·&nbsp; 6 min read</p>
+                        <p class="blog-excerpt flex-grow-1">Competing in a mock financial market taught me more about statistics, uncertainty, and decision-making under pressure than any textbook could.</p>
+                        <button class="btn btn-outline-primary btn-sm mt-3 align-self-start"
+                                data-bs-toggle="modal" data-bs-target="#post2Modal">
+                            Read More
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Placeholder Post 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card blog-card h-100">
+                    <div class="card-body d-flex flex-column p-4">
+                        <div class="mb-2">
+                            <span class="blog-tag">Mathematics</span>
+                        </div>
+                        <h5 class="card-title fw-bold" style="color: var(--primary-color);">Why Probability Theory Matters More Than You Think</h5>
+                        <p class="blog-meta">Coming Soon &nbsp;·&nbsp; Draft</p>
+                        <p class="blog-excerpt flex-grow-1">From trading to machine learning to board games — a solid understanding of probability quietly underpins almost everything interesting I work on.</p>
+                        <button class="btn btn-outline-secondary btn-sm mt-3 align-self-start" disabled>Coming Soon</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Post 1 Modal -->
+    <div class="modal fade" id="post1Modal" tabindex="-1" aria-labelledby="post1ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="post1ModalLabel">What I Learned Building a Compiler</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body px-4">
+                    <p class="blog-meta">February 2026 &nbsp;·&nbsp; Computer Science · Compilers</p>
+
+                    <p>Building the Bminor compiler was the most technically demanding project I've worked on. The course walked us from scratch — writing a lexer with Flex, a parser with Bison, a type-checker, and finally an x86 assembly code generator in C. Each stage exposed a different layer of how programming languages actually work.</p>
+
+                    <h5>The Hardest Part Wasn't the Code</h5>
+                    <p>I expected the assembly generation to be the toughest stage. In reality, the hardest part was keeping track of the invariants at every layer of the compiler. A small assumption made in the parser would quietly break things three stages later. Good abstractions and disciplined testing mattered more than raw cleverness.</p>
+
+                    <h5>What I'd Do Differently</h5>
+                    <p>Start with a thorough test suite from day one. Writing tests after the fact — especially for a compiler where bugs can hide in edge cases — is far more painful than building them incrementally alongside the implementation.</p>
+
+                    <p>Overall, it's the kind of project I'd recommend to anyone who wants to truly understand how software works under the hood.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Post 2 Modal -->
+    <div class="modal fade" id="post2Modal" tabindex="-1" aria-labelledby="post2ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="post2ModalLabel">Lessons from the IMC Prosperity Trading Challenge</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body px-4">
+                    <p class="blog-meta">January 2026 &nbsp;·&nbsp; Finance · Algorithms</p>
+
+                    <p>The IMC Prosperity challenge drops you into a mock financial market and asks you to write algorithmic trading bots in Python. You get to observe price histories, manage inventory, and compete against hundreds of other teams — all while the market's rules are only partially revealed.</p>
+
+                    <h5>The Market Teaches Humility</h5>
+                    <p>The first few rounds felt manageable — stable goods with predictable mean-reversion. Then basket goods, options, and goods with hidden influencing factors arrived. Strategies that worked one round would crater the next. The market punishes overconfidence quickly.</p>
+
+                    <h5>Statistics Over Intuition</h5>
+                    <p>The teams that did well weren't the ones with the most complex models — they were the ones who understood their edge clearly and sized positions accordingly. Trying to implement Black-Scholes on an options round was humbling; the fit was never as clean as the textbook suggests.</p>
+
+                    <p>The biggest takeaway: uncertainty is a first-class input, not something to be eliminated before you start trading.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Derick Shi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

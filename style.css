@@ -151,6 +151,12 @@ footer {
     background-color: white !important;
     border-radius: 12px !important;
     border: 1px solid #e1e8ed !important;
-    max-width: 100% !important;
-    height: auto !important;
+    overflow-x: auto;
+    overflow-y: auto;
+    max-height: 85vh;
+}
+
+.mermaid svg {
+    min-width: 1400px;
+    height: auto;
 }
