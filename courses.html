@@ -48,8 +48,6 @@
         .tested-out { background-color: #e0d4f7; border: 1px solid #6f42c1; }
         .in-progress { background-color: #fff3cd; border: 1px solid #ffc107; }
         .planned { background-color: #f8f9fa; border: 1px solid #6c757d; }
-        /* Adjusted AP to match your Mermaid stroke-dasharray look */
-        .ap { background-color: #e2e3e5; border: 1px dashed #343a40; }
     </style>
 </head>
 <body class="bg-light">
@@ -79,24 +77,20 @@
         <h1 class="projects-title">Course Prerequisite Tree</h1>
         <p class="lead mb-5">A visualization of my Notre Dame academic journey as a College of Engineering Computer
             Science student with a supplementary major in ACMS and an
-            Engineering Corporate Practice minor. Graph is made with Mermaid.js, so it's a bit rough but gets the job done!</p>
+            Engineering Corporate Practice minor. Updated through Spring 2026.</p>
 
         <section class="mb-4 p-4 bg-white rounded shadow-sm">
             <h5 class="mb-3" style="color: var(--primary-color); font-weight: 700;">Status Legend</h5>
             <div class="d-flex flex-wrap gap-2">
                 <div class="legend-item"><div class="legend-color taken"></div><span>Taken</span></div>
                 <div class="legend-item"><div class="legend-color tested-out"></div><span>Tested Out</span></div>
-                <div class="legend-item"><div class="legend-color in-progress"></div><span>In Progress</span></div>
+                <div class="legend-item"><div class="legend-color in-progress"></div><span>Spring 2026</span></div>
                 <div class="legend-item"><div class="legend-color planned"></div><span>Planned</span></div>
-                <div class="legend-item"><div class="legend-color ap"></div><span>AP Credit (Unused)</span></div>
             </div>
         </section>
 
         <section class="mermaid">
 graph LR
-    %% Use the logic from our previous successful render
-    
-
     subgraph CS_Track [Computer Science Courses]
         direction TB
         CS1[Fundamentals of Computing]
@@ -167,10 +161,9 @@ graph LR
     classDef taken fill:#d4edda,stroke:#28a745,stroke-width:2px;
     classDef tested fill:#e0d4f7,stroke:#6f42c1,stroke-width:2px;
     classDef ip fill:#fff3cd,stroke:#ffc107,stroke-width:2px;
-    classDef ap fill:#e2e3e5,stroke:#343a40,stroke-dasharray:5,5;
+    classDef planned fill:#f8f9fa,stroke:#6c757d,stroke-width:2px;
 
     %% Assignments
-    class AP1,AP2,AP3,AP4,AP5,AP6 ap
     class CS1,CS2,CS3,CS4,CS5,CS6,CS7,CS8,CS9,CS10,CS11,CS15,MA4,MA5,MA6,MA7,MA9,ENG2,ENG3,ENG5,GE1,GE3,GE4,GE5,GE6,BUS1,BUS2 taken
     class MA1,MA2,MA3,ENG1,GE2,ENG4 tested
     class CS12,CS13,CS14,MA10,GE7 ip

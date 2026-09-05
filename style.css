@@ -76,6 +76,89 @@ body {
     border-radius: 8px;
 }
 
+.essay-header {
+    align-items: flex-start;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.essay-import-btn {
+    flex: 0 0 auto;
+    margin-top: 0.35rem;
+}
+
+.essay-panel,
+.essay-reader {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+}
+
+.essay-list {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.essay-list-item {
+    background: #f8fafc;
+    border: 1px solid #dfe7ef;
+    border-radius: 8px;
+    color: var(--text-dark);
+    display: grid;
+    gap: 0.25rem;
+    padding: 0.8rem 0.9rem;
+    text-align: left;
+    width: 100%;
+}
+
+.essay-list-item:hover,
+.essay-list-item:focus {
+    border-color: var(--accent-color);
+    outline: none;
+}
+
+.essay-list-item span {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.essay-list-item small,
+.essay-empty,
+.essay-meta,
+.essay-kicker {
+    color: #64748b;
+}
+
+.essay-empty {
+    border: 1px dashed #cbd5e1;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.essay-kicker {
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+}
+
+.essay-reader h2 {
+    color: var(--primary-color);
+    font-weight: 800;
+}
+
+.essay-body {
+    margin-top: 2rem;
+}
+
+.essay-body p {
+    color: #263238;
+    font-size: 1.05rem;
+    line-height: 1.85;
+}
+
 /* Titles */
 .projects-title, .contact-title, .links-title {
     color: var(--primary-color);
@@ -159,4 +242,15 @@ footer {
 .mermaid svg {
     min-width: 1400px;
     height: auto;
+}
+
+@media (max-width: 767px) {
+    .essay-header {
+        display: block;
+    }
+
+    .essay-import-btn {
+        margin-top: 1rem;
+        width: 100%;
+    }
 }

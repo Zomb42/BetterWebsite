@@ -1,0 +1,7 @@
+A Sample Essay
+
+This is a sample essay file. The first non-empty line becomes the title that appears on the website.
+
+Each paragraph is separated by a blank line. When the blog page loads this file, it turns these blocks of text into readable paragraphs inside the essay reader.
+
+To publish a real essay, replace this file with your own writing or add another .txt file in this folder. Then add a matching entry in manifest.json with the title, date, and filename.

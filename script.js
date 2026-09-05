@@ -49,18 +49,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    const showResumeBtn = document.getElementById('show-resume');
-    if (showResumeBtn) {
-        showResumeBtn.addEventListener('click', function() {
-            // Trigger download automatically when modal opens
-             // Small delay to ensure modal is visible first
-        });
-    }
-    const downloadResumeBtn = document.getElementById('download-resume');
-    if (downloadResumeBtn) {
-        downloadResumeBtn.addEventListener('click', function() {
-            // Trigger the download when the PDF download button is clicked
-            // You can add any additional logic here if needed
-        });
-    }
 });
