@@ -51,6 +51,34 @@ document.addEventListener('DOMContentLoaded', function() {
         };
     }
 
+    function appendInlineFormatting(element, text) {
+        const parts = text.split(/(\*\*[^*]+\*\*)/g);
+
+        parts.forEach((part) => {
+            if (part.startsWith('**') && part.endsWith('**')) {
+                const strong = document.createElement('strong');
+                strong.textContent = part.slice(2, -2);
+                element.appendChild(strong);
+                return;
+            }
+
+            element.appendChild(document.createTextNode(part));
+        });
+    }
+
+    function createEssayBlock(paragraph) {
+        const headingMatch = paragraph.match(/^(#{2,3})\s+(.+)$/);
+        if (headingMatch) {
+            const heading = document.createElement(headingMatch[1].length === 2 ? 'h3' : 'h4');
+            appendInlineFormatting(heading, headingMatch[2]);
+            return heading;
+        }
+
+        const p = document.createElement('p');
+        appendInlineFormatting(p, paragraph);
+        return p;
+    }
+
     function renderEssay(essay) {
         kicker.textContent = essay.source || 'Essay';
         title.textContent = essay.title;
@@ -58,9 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
         body.innerHTML = '';
 
         essay.paragraphs.forEach((paragraph) => {
-            const p = document.createElement('p');
-            p.textContent = paragraph;
-            body.appendChild(p);
+            body.appendChild(createEssayBlock(paragraph));
         });
     }
 
