@@ -1,5 +1,20 @@
 [
   {
+    "title": "Wispy Winter Wonderland",
+    "date": "12/10/2025",
+    "file": "dreamyWinter.txt"
+  },
+  {
+    "title": "The Friends We Made Along the Way",
+    "date": "1/18/2026",
+    "file": "friendsMade.txt"
+  },
+  {
+    "title": "Our Joyous Funeral Procession",
+    "date": "4/23/2026",
+    "file": "joyousFuneral.txt"
+  },
+  {
     "title": "Morality, Economy, and Ethics: The Implications of Quantitative Finance",
     "date": "9/12/2026 V2",
     "file": "quantMorality.txt"
