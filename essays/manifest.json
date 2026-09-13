@@ -1,18 +1,21 @@
 [
   {
     "title": "Wispy Winter Wonderland",
-    "date": "12/10/2025",
-    "file": "dreamyWinter.txt"
+    "date": "12/7/2025",
+    "file": "dreamyWinter.txt",
+    "source":"A Poetic Rant"
   },
   {
     "title": "The Friends We Made Along the Way",
     "date": "1/18/2026",
-    "file": "friendsMade.txt"
+    "file": "friendsMade.txt",
+    "source": "Party Prep"
   },
   {
     "title": "Our Joyous Funeral Procession",
     "date": "4/23/2026",
-    "file": "joyousFuneral.txt"
+    "file": "joyousFuneral.txt",
+    "source": "Party Prep"
   },
   {
     "title": "Morality, Economy, and Ethics: The Implications of Quantitative Finance",
@@ -22,6 +25,7 @@
   {
     "title": "Writing A Storied Conclusion",
     "date": "9/12/2026",
-    "file": "bookFinished.txt"
+    "file": "bookFinished.txt",
+    "source": "A Poetic Rant"
   }
 ]
