@@ -1,26 +1,46 @@
 [
   {
+    "title": "Despondency",
+    "date": "10/30/21 V5",
+    "file": "despondency.txt",
+    "source": "A Poetic Rant"
+  },
+  {
+    "title": "Haikus and Tankas",
+    "date": "Various dates",
+    "file": "haikusTanka.txt",
+    "source": "A Poetic Rant"
+  },
+
+  {
+    "title": "A Late Sunshower",
+    "date": "9/22/2022",
+    "file": "lateSunshower.txt",
+    "source": "A Poetic Rant"
+  },
+  {
+    "title": "Let me Bade you Goodbye",
+    "date": "3/13/2023",
+    "file": "badeGoodbye.txt",
+    "source": "A Poetic Rant"
+  },
+  {
     "title": "Wispy Winter Wonderland",
     "date": "12/7/2025",
     "file": "dreamyWinter.txt",
     "source":"A Poetic Rant"
   },
   {
-    "title": "The Friends We Made Along the Way",
-    "date": "1/18/2026",
-    "file": "friendsMade.txt",
-    "source": "Party Prep"
-  },
-  {
-    "title": "Our Joyous Funeral Procession",
-    "date": "4/23/2026",
-    "file": "joyousFuneral.txt",
+    "title": "Party Themes",
+    "date": "Various dates",
+    "file": "partyTheme.txt",
     "source": "Party Prep"
   },
   {
     "title": "Morality, Economy, and Ethics: The Implications of Quantitative Finance",
     "date": "9/12/2026 V2",
-    "file": "quantMorality.txt"
+    "file": "quantMorality.txt",
+    "source": "A Somewhat Coherent Esssay"
   },
   {
     "title": "Writing A Storied Conclusion",
