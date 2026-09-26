@@ -16,7 +16,7 @@
     "title": "A Late Sunshower",
     "date": "9/22/2022",
     "file": "lateSunshower.txt",
-    "source": "A Poetic Rant"
+    "source": "My Favorite(?) Poetic Rant"
   },
   {
     "title": "Let me Bade you Goodbye",
@@ -47,5 +47,12 @@
     "date": "9/12/2026",
     "file": "bookFinished.txt",
     "source": "A Poetic Rant"
+  },
+  {
+    "title": "Making Choices",
+    "date": "9/26/2026",
+    "file": "makingChoices.txt",
+    "source": "Something with a bit more substances?"
   }
+
 ]

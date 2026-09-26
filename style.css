@@ -151,12 +151,15 @@ body {
 
 .essay-body {
     margin-top: 2rem;
+    max-width: 65ch;
+    overflow-wrap: anywhere;
 }
 
 .essay-body p {
     color: #263238;
     font-size: 1.05rem;
     line-height: 1.85;
+    white-space: pre-line;
 }
 
 .essay-body h3,

@@ -1,0 +1,45 @@
+# Making Choices 
+
+This is kind of a generic topic, but I think the topic of choices is something that warrants a bit of attention
+and analysis. We all make choices from the second we wake up: the clothes to wear, whether or not we should brush 
+our teeth, what to eat for breakfast, etc etc. It's such an integral part of our lives (Perhaps one it could argue IT IS 
+our lives), but regardless, something interesting that I want to explore is idea of choices through the lens of a 
+cost and benefit analysis. 
+
+Part of me feels like this is a bit overkill, but I think there is ome value to be gained from just a viewpoint. To start,
+I think it's definitely possible to examine all of the choices that we make as the result of the cost and the result of that choice.
+This is a bit more apparent for more difficult choices like choosing to stay in to do homework instead of partying your friends, but 
+I think this also applies to the more mundane acts. Choosing to brush your teeth for instance, does cost some time and some effort, but 
+the benefit of doing so and having good oral health substantially outweighs the costs, so it seems quite obvious to do. I think all 
+of this seems quite obvious so far, thinking of decisions as a sum of good and bad outcomes and the fact that difficult decisions are situations
+where the valuation of the good and bad are a bit ambigious, but I think we can examine choices through more dimensions like volatility through a vol surface.
+
+As a bit of a context, while there is a current deemed implied volatility (essentially how much something moves) for a specific asset like stock, we are often curious in 
+how that volatility will look given certain scenarios like the passage of time or the stock underlying price moving. This causes us to evaluate implied volatility 
+as a raw number but also as a multi-dimensional projection map. Maybe think of a 3D terrain elevation map for visualization? Ignoring the other specifics like maybe 
+computationally efficient vol slide or how the vol surface interacts with SOFR models, I think this can be a valuable framework to analyze most other valuations
+including the valuation of the good and bad outcomes stemming from decisions.
+
+I suppose there are a lot of various dimensions that we can see may influence our choice's outcome, but I think 2 that kind of stand out 
+are our competence regarding certain aspects about the situation and how the time aspect of the outcomes. Going back to the example above about 
+going out with friends instead of studying, I think 2 important competence aspects for this situation is how developed you feel your social life is and how
+prepared you feel for the class. Like someone who is really comfortable in class, and feels a bit isolated would see the net benefit of the action as much larger than
+if someone who is behind in class and has already hung out with their friends a lot this week. Of course this competency dimension would change depending on the aspects 
+that are involved, but I feel like some something like this, maybe like health, status, situational happiness is always present .For the time aspect, I think we can view 
+the benefits and costs of an action as different points in time. Going out with your friends will definitely provide some social benefit in the short term (if not then this choice would be trivial wouldn't it?)
+but the costs is the long term potential effect in that you might feel more behind in your classes and that getting a poor grade might impact your future career. Even though we don't 
+really specify this idea, I think this makes sense intuitively right? 
+
+Having established this thought structure, I think one thing that kind of stands out to me is the idea that a lot of what we do or are at least taught to do are actions where the resulting benefit 
+often comes in the long term. Like the idea of studying talked about above, but also eating healthy, going to sleep at a reasonable time, not smoking, etc etc. We may percieve these things
+as good and rightfully so, but if we decompose its benefits and costs, we see that there is real cost in the short term, a chicken salad doesn't really taste good, but the benefit in the long term greatly outweighs it. 
+We are raised and taught this disposition, but how we do we manage that and also the fact that sometimes there are actions that are purely beneficial in the short term yet damaging in the long term and we should still take them? 
+Like I would say attending your grand parent's funeral instead of studying for a class, is the moral thing to do, but for less stark events, how do we find the rational to actively pursue these things? 
+Should we even have rational to do this? I think it's important to consider when we are actively making this decision, as we constantly all make short term lapse, right (scrolling instead of studying), but we 
+recognize that these things aren't good. What are the situations where we should actively sacrifice the future and isn't a family/ super special event? Is there event such
+situations? Do we simply have to make more events family/super special? I'm honestly really grasping for examples here. Like, even for something such as procrastinating on your other homework
+by writing this blog is something that I think has long term benefits of helping me be more creative. I also think just using my brain in general is quite good for me and my future career. It definitely has
+some middle term cost though, but I suppose that benefit diagram is overall still positive though. 
+
+Not really sure what the answer is to this question, and whether I should stop pursing long term beneficial things, as I think we are rightly raised to see it as the best course of action.
+I do want to make the best use of my extra flexibility to make these choices though, as this might be one of the last times in my life this occurs. 
