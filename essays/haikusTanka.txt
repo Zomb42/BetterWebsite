@@ -1,4 +1,5 @@
 # A collection of shorter scenes
+Format: poetry
 
 ## A bit incomplete but there is beauty in that I suppose. 
 

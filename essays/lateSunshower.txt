@@ -1,4 +1,5 @@
 # A Late Sunshower
+Format: poetry
 
 (The 4th stanza is lost to history, but I feel like it just makes it more bittersweet)
 
@@ -39,4 +40,4 @@ before disintegrating in her frail hands ~
 
 Glistening rainbows,
 captivated in droplets,
-fall in sunny mists 
+fall in sunny mists

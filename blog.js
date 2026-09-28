@@ -36,13 +36,25 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function splitEssayText(text, fallbackTitle) {
-        const lines = text.replace(/\r\n/g, '\n').split('\n');
+        const lines = text.replace(/\r\n?/g, '\n').split('\n');
         const firstContentIndex = lines.findIndex((line) => line.trim().length > 0);
         const parsedTitle = firstContentIndex >= 0 ? lines[firstContentIndex].trim().replace(/^#\s*/, '') : fallbackTitle;
-        const remainingText = firstContentIndex >= 0 ? lines.slice(firstContentIndex + 1).join('\n') : '';
+        const bodyLines = firstContentIndex >= 0 ? lines.slice(firstContentIndex + 1) : [];
+        // Only the first nonempty line after the title can be format metadata.
+        const formatIndex = bodyLines.findIndex((line) => line.trim().length > 0);
+        const formatMatch = formatIndex >= 0
+            ? bodyLines[formatIndex].trim().match(/^Format:\s*(poetry|prose)$/i)
+            : null;
+        const isPoetry = formatMatch && formatMatch[1].toLowerCase() === 'poetry';
+        if (formatMatch) {
+            bodyLines.splice(formatIndex, 1);
+        }
+        const remainingText = bodyLines.join('\n');
         const paragraphs = remainingText
             .split(/\n\s*\n/)
-            .map((paragraph) => paragraph.trim())
+            .map((paragraph) => isPoetry
+                ? paragraph.trim()
+                : paragraph.trim().replace(/[^\S\n]*\n[^\S\n]*/g, ' '))
             .filter(Boolean);
 
         return {

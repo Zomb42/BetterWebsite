@@ -11,14 +11,19 @@ Second paragraph.
 ```
 
 The first nonempty line is the title (an optional `#` prefix is supported).
-Each line after the title keeps its line break on the website. Long lines
+Articles use prose formatting by default: a single Enter acts like a space,
+and a blank line (Enter twice) starts a new paragraph. You can break long
+source lines wherever convenient without forcing those breaks on the website.
+Long lines
 automatically wrap at the reader's edge, with a maximum reading width of 65ch
 (roughly 65 characters) that shrinks on smaller screens.
 
-For poems, put each verse on its own line and leave a blank line between stanzas:
+For poems, add `Format: poetry` directly below the title, put each verse on
+its own line, and leave a blank line between stanzas:
 
 ```text
 Poem Title
+Format: poetry
 
 The first line of a stanza
 The second line of a stanza
@@ -28,8 +33,10 @@ The next stanza begins here
 ```
 
 One or more blank lines create a single gap between paragraphs or stanzas.
-For flowing prose, keep each paragraph on one source line and let the website
-wrap it automatically; use your editor's word wrap for easier editing.
+The format line is hidden on the website. It must be the first nonempty line
+after the title; it applies to the whole file. `Format: prose` is also supported,
+but optional because prose is the default. These settings work the same way
+for published articles and imported previews, without changes to `manifest.json`.
 Extra spaces and tabs collapse to a single space. Standalone `##` and `###`
 headings and `**bold text**` are also supported; separate headings with blank lines.
 
