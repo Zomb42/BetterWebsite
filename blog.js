@@ -6,6 +6,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const title = document.getElementById('essay-title');
     const meta = document.getElementById('essay-meta');
     const body = document.getElementById('essay-body');
+    const libraryToggle = document.getElementById('library-toggle');
+    const libraryPanel = document.getElementById('library-panel');
+    const mobileLayout = window.matchMedia('(max-width: 991.98px)');
+    let selectedButton = null;
+
+    libraryToggle.addEventListener('click', function() {
+        const expanded = libraryToggle.getAttribute('aria-expanded') !== 'true';
+        libraryToggle.setAttribute('aria-expanded', String(expanded));
+        libraryPanel.classList.toggle('is-open', expanded);
+    });
 
     async function loadPublishedEssays() {
         try {
@@ -15,20 +25,26 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             const essays = await manifestResponse.json();
-            essays.forEach(async function(essayMeta) {
+            // Fetch concurrently, then render in manifest order regardless of load timing.
+            const results = await Promise.allSettled(essays.map(async function(essayMeta) {
                 const essayResponse = await fetch('essays/' + essayMeta.file);
                 if (!essayResponse.ok) {
                     return;
                 }
 
                 const parsed = splitEssayText(await essayResponse.text(), essayMeta.title || essayMeta.file);
-                addEssayToList({
+                return {
                     title: essayMeta.title || parsed.title,
                     paragraphs: parsed.paragraphs,
                     date: essayMeta.date,
                     filename: essayMeta.file,
                     source: essayMeta.source || 'Published Essay'
-                });
+                };
+            }));
+            results.forEach(function(result) {
+                if (result.status === 'fulfilled' && result.value) {
+                    addEssayToList(result.value);
+                }
             });
         } catch (error) {
             // Opening the HTML file directly can block fetch; importing drafts still works.
@@ -102,7 +118,22 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    function addEssayToList(essay) {
+    function selectEssay(essay, button) {
+        if (selectedButton) {
+            selectedButton.removeAttribute('aria-current');
+        }
+        selectedButton = button;
+        button.setAttribute('aria-current', 'true');
+        renderEssay(essay);
+        if (mobileLayout.matches) {
+            libraryToggle.setAttribute('aria-expanded', 'false');
+            libraryPanel.classList.remove('is-open');
+            title.focus({ preventScroll: true });
+            title.scrollIntoView({ block: 'start' });
+        }
+    }
+
+    function addEssayToList(essay, isDraft = false) {
         const button = document.createElement('button');
         button.type = 'button';
         button.className = 'essay-list-item';
@@ -116,11 +147,16 @@ document.addEventListener('DOMContentLoaded', function() {
         button.appendChild(label);
         button.appendChild(detail);
         button.addEventListener('click', function() {
-            renderEssay(essay);
+            selectEssay(essay, button);
         });
 
-        essayList.prepend(button);
+        if (isDraft) {
+            essayList.prepend(button);
+        } else {
+            essayList.appendChild(button);
+        }
         emptyState.classList.add('d-none');
+        return button;
     }
 
     loadPublishedEssays();
@@ -141,8 +177,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 source: 'Imported Draft'
             };
 
-            addEssayToList(essay);
-            renderEssay(essay);
+            const button = addEssayToList(essay, true);
+            selectEssay(essay, button);
             fileInput.value = '';
         });
         reader.readAsText(file);

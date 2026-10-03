@@ -39,11 +39,16 @@
 
         <div class="row g-4">
             <aside class="col-lg-4">
-                <div class="essay-panel p-4">
-                    <h2 class="h5 mb-3">Library</h2>
+                <div id="library-panel" class="essay-panel p-4">
+                    <h2 class="h5 mb-3 library-heading">Library</h2>
+                    <button id="library-toggle" class="library-toggle" type="button" aria-expanded="false" aria-controls="library-content">
+                        Browse writing <span aria-hidden="true" class="library-toggle-icon">⌄</span>
+                    </button>
+                    <div id="library-content" class="library-content">
                     <div id="essay-list" class="essay-list"></div>
                     <div id="essay-empty" class="essay-empty">
                         No essays are published yet. Import a .txt file to preview one here.
+                    </div>
                     </div>
                 </div>
             </aside>
@@ -51,10 +56,10 @@
             <section class="col-lg-8">
                 <article class="essay-reader p-4 p-md-5">
                     <p id="essay-kicker" class="essay-kicker">Starting Page</p>
-                    <h2 id="essay-title">Introduction</h2>
+                    <h2 id="essay-title" tabindex="-1">Introduction</h2>
                     <p id="essay-meta" class="essay-meta">A place for Derick to store his favorite essays and past writings. </p>
                     <div id="essay-body" class="essay-body">
-                        <p>A melancholic view into my chaotic concious. Does anyone write while living a perfectly clear, joyous present? Perhaps later, but I would argue not in that moment ~</p>
+                        <p>A melancholic view into my chaotic concious. Does anyone write while living a perfectly clear, joyous present? Perhaps later, but I would argue not in that moment. A touch of AI is used in my longer quant morality piece, but the whole purpose of this page is to capture human essence.</p>
                     </div>
                 </article>
             </section>

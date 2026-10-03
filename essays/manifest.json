@@ -1,5 +1,48 @@
 [
   {
+    "title": "Morality, Economy, and Ethics: The Implications of Quantitative Finance",
+    "date": "9/12/2026 V2",
+    "file": "quantMorality.txt",
+    "source": "A Somewhat Coherent Esssay"
+  },
+  {
+    "title": "Fluttering Perceptions",
+    "date": "10/3/2026",
+    "file": "flutteringPerceptions.txt",
+    "source": "I don't know what I'm writing anymore"
+  },
+  {
+    "title": "Making Choices",
+    "date": "9/26/2026",
+    "file": "makingChoices.txt",
+    "source": "Something with a bit more substances?"
+  },
+  
+  {
+    "title": "Writing A Storied Conclusion",
+    "date": "9/12/2026",
+    "file": "bookFinished.txt",
+    "source": "A Poetic Rant"
+  },
+  {
+    "title": "Wispy Winter Wonderland",
+    "date": "12/7/2025",
+    "file": "dreamyWinter.txt",
+    "source": "A Poetic Rant"
+  },
+  {
+    "title": "Let me Bade you Goodbye",
+    "date": "3/13/2023",
+    "file": "badeGoodbye.txt",
+    "source": "A Poetic Rant"
+  },
+  {
+    "title": "A Late Sunshower",
+    "date": "9/22/2022",
+    "file": "lateSunshower.txt",
+    "source": "My Favorite(?) Poetic Rant"
+  },
+  {
     "title": "Despondency",
     "date": "10/30/21 V5",
     "file": "despondency.txt",
@@ -11,48 +54,10 @@
     "file": "haikusTanka.txt",
     "source": "A Poetic Rant"
   },
-
-  {
-    "title": "A Late Sunshower",
-    "date": "9/22/2022",
-    "file": "lateSunshower.txt",
-    "source": "My Favorite(?) Poetic Rant"
-  },
-  {
-    "title": "Let me Bade you Goodbye",
-    "date": "3/13/2023",
-    "file": "badeGoodbye.txt",
-    "source": "A Poetic Rant"
-  },
-  {
-    "title": "Wispy Winter Wonderland",
-    "date": "12/7/2025",
-    "file": "dreamyWinter.txt",
-    "source":"A Poetic Rant"
-  },
   {
     "title": "Party Themes",
     "date": "Various dates",
     "file": "partyTheme.txt",
     "source": "Party Prep"
-  },
-  {
-    "title": "Morality, Economy, and Ethics: The Implications of Quantitative Finance",
-    "date": "9/12/2026 V2",
-    "file": "quantMorality.txt",
-    "source": "A Somewhat Coherent Esssay"
-  },
-  {
-    "title": "Writing A Storied Conclusion",
-    "date": "9/12/2026",
-    "file": "bookFinished.txt",
-    "source": "A Poetic Rant"
-  },
-  {
-    "title": "Making Choices",
-    "date": "9/26/2026",
-    "file": "makingChoices.txt",
-    "source": "Something with a bit more substances?"
   }
-
 ]
