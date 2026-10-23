@@ -6,6 +6,12 @@
     "source": "A Somewhat Coherent Esssay"
   },
   {
+    "title": "A Stained Impression",
+    "date": "10/17/2026",
+    "file": "stainImpression.txt",
+    "source": "A Poetic Rant"
+  },
+  {
     "title": "A Goose's Daydream Cut Short",
     "date": "10/10/2026",
     "file": "gooseDaydream.txt",
@@ -34,6 +40,12 @@
     "title": "Wispy Winter Wonderland",
     "date": "12/7/2025",
     "file": "dreamyWinter.txt",
+    "source": "A Poetic Rant"
+  },
+  {
+    "title": "The Fall Breeze",
+    "date": "11/02/2025",
+    "file": "fallBreeze.txt",
     "source": "A Poetic Rant"
   },
   {
