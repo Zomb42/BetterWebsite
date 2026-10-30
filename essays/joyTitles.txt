@@ -1,6 +1,6 @@
-#I Like Titles
+# I Like Titles
 
-Bit of a shorter train of thought here. 
+Bit of a less poetic train of thought here. 
 
 For some reason, one of my favorite parts about writing is to come up with the title for a piece.
 While it is the first impression of the reader, and in some sense, the most important few words of 
@@ -20,4 +20,15 @@ surprises or connections that the reader originally didn't think about when cons
 Consider the song (essentially a lyrical prose) "Hate That I Made You Love Me" by Ariana Grande. It's title 
 is vague, and I would argue to a point where it kind of is an issue grammatically. Like, it doens't just accept
 its incompleteness and rather tries to mask it with more words. It's imcompleteness nature also begs for 
-someone to fill in the messing noun at the beginning, but depend
+someone to fill in the messing noun at the beginning, but depending on the word "I" or "You", it transforms the 
+proposed meaning of the piece. "I hate that I made you love me" seems much more regretful than "You hate I made 
+you love me" which seems a bit cheeky yet also twisted in morality. 
+
+I guess it can be thought of that titles are somewhat similar to meaingful symbols as they project meaning, 
+but it can have its meaning altered as the user's perspective changing with different users as or if the same
+user experiences different parts of the their life/story. Unlike perhaps a cool symbolic object, like a shark tooth
+necklace for instance, I feel like a title can't really be a story of itself (unlike the origin story of the shark tooth necklace).
+It points to stories and meaning, but that's all that it can be. To use programming context, it's kind of like a pointer in C that just refers 
+to a memory, perhaps a file, but it's not a substantial block of memory by itself. It's just a couple of words.
+
+Maybe it's because of the multidisciplinary nature of it, but I think I like titles. 
