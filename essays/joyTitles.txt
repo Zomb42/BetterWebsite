@@ -1,4 +1,4 @@
-# I Like Titles
+#I Like Titles
 
 Bit of a less poetic train of thought here. 
 
@@ -29,6 +29,6 @@ but it can have its meaning altered as the user's perspective changing with diff
 user experiences different parts of the their life/story. Unlike perhaps a cool symbolic object, like a shark tooth
 necklace for instance, I feel like a title can't really be a story of itself (unlike the origin story of the shark tooth necklace).
 It points to stories and meaning, but that's all that it can be. To use programming context, it's kind of like a pointer in C that just refers 
-to a memory, perhaps a file, but it's not a substantial block of memory by itself. It's just a couple of words.
+to a memory, perhaps a file, but it's not a substantial block of memory by itself. It's just a couple of words afterall ~
 
 Maybe it's because of the multidisciplinary nature of it, but I think I like titles. 
